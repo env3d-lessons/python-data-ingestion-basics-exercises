@@ -3,13 +3,14 @@
 Be familiar with the techniques presented at 
 https://github.com/env3d/python-data-ingestion-basics.
 
-Create a working directory on your server under ${HOME}/bc_liquor
+# Question 0
 
 The BC government has made many datasets publicly available via its open data 
 portal (https://www2.gov.bc.ca/gov/content/data/open-data).  For this exercise, 
 download the BC liquor store produce price list from 
 https://catalogue.data.gov.bc.ca/dataset/bc-liquor-store-product-price-list-historical-prices 
 (you’ll have to get the direct csv link from the page and use wget or curl to download it to your working directory).
+name this file `prices.csv`
 
 # Question 1
 
@@ -57,7 +58,7 @@ the product type and the value being the average price.
 
 ```python
 >>> process_csv_dict()
-[{'Wine': 226.1609897172178}, {'Spirits': 1103.7351297169746}, {'Refreshment Beverages': 15.786648648648605}, {'Beer': 17.640457516339776}, {'General Merchandise': 10.99}]
+{'Wine': 231.77917462743028, 'Spirits': 1375.8744982699216, 'Refreshment Beverages': 15.805849056603703, 'Beer': 17.476013667425885, 'General Merchandise': 13.038000000000002}
 ```
 
 
@@ -70,16 +71,17 @@ function of the Dataframe object.
 Here's the documentation to the groupby function:
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html 
 
-The expected output should be the following:
+The expected output is a dataframe that contains the average price for each 
+category of product, as below:
 
 ```python
 >>> process_pandas_groupby()
                        PRODUCT_PRICE
 ITEM_CATEGORY_NAME                  
-Beer                       17.640458
-General Merchandise        10.990000
-Refreshment Beverages      15.786649
-Spirits                  1103.735130
-Wine                      226.160990
+Beer                       17.476014
+General Merchandise        13.038000
+Refreshment Beverages      15.805849
+Spirits                  1375.874498
+Wine                      231.779175
 ```
 

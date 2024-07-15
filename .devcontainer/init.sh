@@ -7,5 +7,6 @@ sudo ln -s $(pwd) /var/www/html
 sudo a2enmod cgid
 sudo service apache2 start
 pip install pytest
+pip install pytest-mock
 pip install pandas
 
