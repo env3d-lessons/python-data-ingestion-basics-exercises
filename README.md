@@ -15,12 +15,15 @@ name this file `prices.csv`
 # Question 1
 
 Use the three techniques presented (pure python, python csv, and pandas) to calculate the average 
-price of all products.  You will create a file called load_data.py in your working directory.  
+price of all products.  
+
+You will create a file called **`load_data.py`** in your working directory.  
+
 This python file will contain 3 functions: 
 
-process_py: use the pure python strategy
-process_csv: use the csv module
-process_pandas: use the pandas module
+  - `process_py`: use the pure python strategy
+  - `process_csv`: use the csv module
+  - `process_pandas`: use the pandas module
 
 Below is a template for your load_data.py file:
 
