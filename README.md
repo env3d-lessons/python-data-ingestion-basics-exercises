@@ -6,7 +6,7 @@ https://github.com/env3d/python-data-ingestion-basics.
 # Question 0
 
 The BC government has made many datasets publicly available via its open data 
-portal (https://www2.gov.bc.ca/gov/content/data/open-data).  For this exercise, 
+portal (https://catalogue.data.gov.bc.ca/).  For this exercise, 
 download the BC liquor store produce price list from 
 https://catalogue.data.gov.bc.ca/dataset/bc-liquor-store-product-price-list-historical-prices 
 (you’ll have to get the direct csv link from the page and use wget or curl to download it to your working directory).
@@ -45,7 +45,7 @@ if __name__ == "__main__":
     print("Average price using csv module: ", end='')    
     print(process_csv())
     print("Average price using pandas module: ", end='')    
-    print(process_pands())
+    print(process_pandas())
 ```
 
 When you run the above program, all three lines should output the same number.
